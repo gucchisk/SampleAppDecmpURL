@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		EDA0C09B246D7FF7002C4CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA0C099246D7FF7002C4CB2 /* LaunchScreen.storyboard */; };
 		EDA0C0A6246D7FF7002C4CB2 /* SampleAppDecmpURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0C0A5246D7FF7002C4CB2 /* SampleAppDecmpURLTests.swift */; };
 		EDA0C0B1246D7FF7002C4CB2 /* SampleAppDecmpURLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0C0B0246D7FF7002C4CB2 /* SampleAppDecmpURLUITests.swift */; };
+		EDF459C22627258D003771EC /* decmpURL in Frameworks */ = {isa = PBXBuildFile; productRef = EDF459C12627258D003771EC /* decmpURL */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF459C22627258D003771EC /* decmpURL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = SampleAppDecmpURL;
+			packageProductDependencies = (
+				EDF459C12627258D003771EC /* decmpURL */,
+			);
 			productName = SampleAppDecmpURL;
 			productReference = EDA0C08B246D7FF3002C4CB2 /* SampleAppDecmpURL.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = EDA0C082246D7FF3002C4CB2;
+			packageReferences = (
+				EDF459C02627258D003771EC /* XCRemoteSwiftPackageReference "decmpURL" */,
+			);
 			productRefGroup = EDA0C08C246D7FF3002C4CB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDF459C02627258D003771EC /* XCRemoteSwiftPackageReference "decmpURL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gucchisk/decmpURL.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDF459C12627258D003771EC /* decmpURL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDF459C02627258D003771EC /* XCRemoteSwiftPackageReference "decmpURL" */;
+			productName = decmpURL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDA0C083246D7FF3002C4CB2 /* Project object */;
 }

@@ -7,10 +7,27 @@
 //
 
 import SwiftUI
+import decmpURL
 
 struct ContentView: View {
+    @State private var url = ""
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            TextField("URL", text: $url).textFieldStyle(RoundedBorderTextFieldStyle())
+            Button("check") {
+                guard let u = URL(string: url) else {
+                    return
+                }
+                let decmp = DecmpURL(url: u)
+                decmp.decompress(completion: (result) -> {
+                    switch result {
+                    case .success(let url):
+                        print(url)
+                    }
+                })
+            }
+            Text("Hello, World!")
+        }
     }
 }
 
